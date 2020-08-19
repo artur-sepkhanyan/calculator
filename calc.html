@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator
+    </title>
+    <style>
+      body{
+      padding-left: 2%;
+      }
+      #inp_calc{
+        text-align: right;
+      }
+      .calc button{
+        height: 30px;
+        width: 50px;
+        margin: 2px;
+      }
+      #bt0{
+       width: 109px;
+      }
+      .calc{
+        margin-left: 40%;
+      }
+      .result{
+        width: 278px;
+        height: 50px;
+        border: 2px solid black;
+        text-align: center;
+        font-size: 25px;
+      }
+      input{
+        width: 265px;
+        margin: 5px;
+      }
+      #empty div{
+        border: 5px ridge red;
+      }
+      #empty div h1{
+        color: blue;
+      }
+    
+      
+      .btn_ml{
+        margin-left: 3%;
+      }
+     </style>
+  </head>
+  <body>
+    <div id="empty">
+
+    </div>  
+
+    <div class="calc">
+      <div class="result" id="result"></div>
+      <input type="number" id="inp_calc"><br>
+      <button  onclick=tempResult('x2') id="bt1">x2</button>
+      <button  onclick=tempResult('x3') id="bt1">x3</button>
+      <button  onclick=tempResult('10x') id="bt1">10x</button>
+      <button  onclick=tempResult(X!) id="bt1">X!</button>
+      <button  onclick=delLast() id="btres">C</button><br>
+      <button  onclick=tempResult('%') id="bt1">%</button>
+      <button  onclick=tempResult('+/-') id="bt1">+/-</button>
+      <button  onclick=tempResult('√') id="bt1">√</button>
+      <button  onclick=tempResult('/') id="btbj">/</button>
+      <button  onclick=tempResult('Round') id="btbj">Round</button><br>
+      <button  onclick="keysNumber(7)" id="bt7">7</button>
+      <button  onclick="keysNumber(8)" id="bt8">8</button>
+      <button  onclick="keysNumber(9)" id="bt9">9</button>
+      <button  onclick=tempResult('*') id="btbz">*</button>
+      <button  onclick=tempResult('1/x') id="btbz">1/x</button><br>
+      <button  onclick="keysNumber(4)" id="bt4">4</button>
+      <button  onclick="keysNumber(5)" id="bt5">5</button>
+      <button  onclick="keysNumber(6)" id="bt6">6</button>
+      <button  onclick=tempResult('-') id="btminus">-</button><br>
+      <button  onclick="keysNumber(1)" id="bt1">1</button>
+      <button  onclick="keysNumber(2)" id="bt2">2</button>
+      <button  onclick="keysNumber(3)" id="bt3">3</button>
+      <button  onclick=tempResult('+') id="btplus">+</button>
+      <button  onclick=tempResult('=') id="btres">=</button><br>
+      <button  onclick="keysNumber(0)" id="bt0">0</button>
+      <button  onclick=tempResult('.') id="btres">.</button>
+      <button  onclick=reset() id="btres">AC</button>
+      
+
+    </div>
+
+   
+    <script src="calc.js"></script>
+    
+  </body>
+</html>
