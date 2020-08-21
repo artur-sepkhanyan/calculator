@@ -11,6 +11,7 @@
       }
       #inp_calc{
         text-align: right;
+        height: 30px;;
       }
       .calc button{
         height: 30px;
@@ -22,13 +23,6 @@
       }
       .calc{
         margin-left: 40%;
-      }
-      .result{
-        width: 278px;
-        height: 50px;
-        border: 2px solid black;
-        text-align: center;
-        font-size: 25px;
       }
       input{
         width: 265px;
@@ -53,12 +47,11 @@
     </div>  
 
     <div class="calc">
-      <div class="result" id="result"></div>
       <input type="number" id="inp_calc"><br>
       <button  onclick=tempResult('x2') id="bt1">x2</button>
       <button  onclick=tempResult('x3') id="bt1">x3</button>
       <button  onclick=tempResult('10x') id="bt1">10x</button>
-      <button  onclick=tempResult(X!) id="bt1">X!</button>
+      <button  onclick=tempResult('X!') id="bt1">X!</button>
       <button  onclick=delLast() id="btres">C</button><br>
       <button  onclick=tempResult('%') id="bt1">%</button>
       <button  onclick=tempResult('+/-') id="bt1">+/-</button>
@@ -80,7 +73,7 @@
       <button  onclick=tempResult('+') id="btplus">+</button>
       <button  onclick=tempResult('=') id="btres">=</button><br>
       <button  onclick="keysNumber(0)" id="bt0">0</button>
-      <button  onclick=tempResult('.') id="btres">.</button>
+      <button  onclick=keysNumber('.') id="ket">.</button>
       <button  onclick=reset() id="btres">AC</button>
       
 

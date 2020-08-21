@@ -27,27 +27,37 @@ function action(a,tiv){
                 }
                 else {alert('0 բաժանել չի կարելի')};
           break;      
-      //     case 'x2':  
-      //     numberEntered*=numberEntered;
-      //     document.getElementById("inp_calc").value='';
-      //     return numberEntered;
-      //     break; 
-      //     case 'x3':  
-      //     numberEntered=numberEntered*numberEntered*numberEntered;
-      //     document.getElementById("inp_calc").value='';
-      //     return numberEntered;
-      //     break; 
-      //     case '%':  
-      //     numberEntered=(numberEntered*tiv)/100;
-      //     document.getElementById("inp_calc").value='';
-      //     return numberEntered;
-      //     break;       
+          case 'x2':  
+          numberEntered*=numberEntered;
+          document.getElementById("inp_calc").value='';
+          return numberEntered;
+          break;  
+          case '+/-':  
+          if(numberEntered = -numberEntered){
+              numberEntered == numberEntered
+          }else{
+            numberEntered == -numberEntered
+          }
+          document.getElementById("inp_calc").value='';
+          return numberEntered;
+          break;
+          case 'x3':  
+          numberEntered=numberEntered*numberEntered*numberEntered;
+          document.getElementById("inp_calc").value='';
+          return numberEntered;
+          break; 
+          case '%':  
+          numberEntered=(numberEntered*tiv)/100;
+          document.getElementById("inp_calc").value='';
+          return numberEntered;
+          break;       
           default:
           alert("Մուտքագրեք ճիշտ նշան")
           }
 }
+   
 function tempResult(sign){
-    var tiv = inp_calc.valueAsNumber;
+     var tiv = inp_calc.value;
     if(count==0){
           numberEntered=tiv;
           count=1;
@@ -57,7 +67,7 @@ function tempResult(sign){
     }
     else{
           if(sign=='='){
-                document.getElementById("result").innerHTML=action(newSign,tiv)
+            document.getElementById("inp_calc").value=action(newSign,tiv)
                 
           }
           else {
@@ -68,7 +78,8 @@ function tempResult(sign){
 }
 function reset(){
     document.getElementById("inp_calc").value='';
-    document.getElementById("result").innerHTML='';
+
+    count = ''
 }
 function delLast(){
     var strng=document.getElementById("inp_calc").value;
